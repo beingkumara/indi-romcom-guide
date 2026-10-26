@@ -1,0 +1,29 @@
+/* Indi-RomCoM guide: a deep teal accent instead of Hextra's default blue. */
+:root {
+  --primary-hue: 186deg;
+  --primary-saturation: 72%;
+  --primary-lightness: 34%;
+}
+.dark {
+  --primary-hue: 182deg;
+  --primary-saturation: 60%;
+  --primary-lightness: 52%;
+}
+
+/* Tables: numbers line up, wide tables scroll inside themselves. */
+.content table { font-variant-numeric: tabular-nums; }
+
+/* Status chips used on the issues pages. */
+.st { display: inline-block; font-size: .72rem; font-weight: 600; letter-spacing: .03em;
+      text-transform: uppercase; padding: .1rem .45rem; border-radius: .3rem; margin-right: .35rem;
+      vertical-align: .1em; border: 1px solid currentColor; }
+.st-ok   { color: #0f766e; }
+.st-new  { color: #7c3aed; }
+.st-fix  { color: #b45309; }
+.st-pdf  { color: #64748b; }
+.dark .st-ok  { color: #5eead4; }
+.dark .st-new { color: #c4b5fd; }
+.dark .st-fix { color: #fcd34d; }
+.dark .st-pdf { color: #cbd5e1; }
+
+.dup { background: rgba(234, 88, 12, .14); }

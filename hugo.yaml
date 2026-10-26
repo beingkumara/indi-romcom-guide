@@ -1,0 +1,89 @@
+baseURL: "/"
+title: "Indi-RomCoM Guide"
+theme: hextra
+themesDir: themes
+
+# Relative links + .html file names so the built site works on any static host,
+# including a sub-path like GitHub Pages (https://<user>.github.io/<repo>/).
+relativeURLs: true
+uglyURLs: true
+
+enableRobotsTXT: true
+enableInlineShortcodes: true
+
+outputs:
+  home: [html]
+  page: [html]
+  section: [html]
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - name: Guide
+      url: /docs/index.html
+      weight: 1
+    - name: Issues
+      url: /docs/issues/index.html
+      weight: 2
+    - name: Telugu
+      url: /docs/telugu.html
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: Paper ↗
+      url: "https://arxiv.org/abs/2606.30790"
+      weight: 5
+
+params:
+  description: A plain-language guide to the Indi-RomCoM benchmark paper, its pipeline, results, a validated list of issues, and the plan for adding Telugu.
+
+  externalLinkDecoration: true
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    width: wide
+
+  theme:
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: false
+    displayPoweredBy: true
+    width: normal
+
+  displayUpdatedDate: false
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+      js: vendor/flexsearch.bundle.min.js
+
+  mermaid:
+    js: vendor/mermaid.min.js
+
+  editURL:
+    enable: false
+
+  highlight:
+    copy:
+      enable: true
+      display: hover
+
+  page:
+    width: normal
+    contextMenu:
+      enable: false
