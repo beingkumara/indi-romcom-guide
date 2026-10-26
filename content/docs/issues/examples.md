@@ -7,11 +7,9 @@ These are problems in the paper's own example items (Table 5 and Table 9). They 
 
 ## E1. The "50%" math problem has no mixing
 
-<span class="st st-fix">Corrected</span>
+<span class="st st-ok">Confirmed</span>
 
 In the Hindi GSM8K example, the **problem** text is entirely English: *"At the bake sale, Tamara makes $32 from brownies…"*. Only the **solution** is mixed: *"Tamara ke paas 2×8 = 16 tukde the…"*.
-
-*Correction:* my first list said the whole example was English. The solution is mixed; the problem is not.
 
 ## E2. Tamil decomposition example is garbled
 
@@ -33,7 +31,7 @@ The Gujarati word-analogy explanation says *"Aa, aa **uvamai** pramane…"*. *Uv
 
 ## E5. The math example breaks its own protected format
 
-<span class="st st-new">New</span>
+<span class="st st-ok">Confirmed</span>
 
 The math prompt requires every step to be written as `<<expr=result>>` (GSM8K's format), and the paper says these annotations are CAT-0: never touched. The Hindi example's solution reads:
 

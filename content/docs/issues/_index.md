@@ -5,16 +5,7 @@ sidebar:
   open: true
 ---
 
-This section lists every problem found in the preliminary version (arXiv 2606.30790v1), ordered by how much it matters. Every item was re-checked against the paper's PDF, including tables and figures, and every number was recomputed. The [validation log](/docs/validation.html) shows how.
-
-## Status labels
-
-| Label | Meaning |
-|---|---|
-| <span class="st st-ok">Confirmed</span> | Re-checked against the text; holds as stated |
-| <span class="st st-fix">Corrected</span> | Earlier version of this point was partly wrong; now fixed |
-| <span class="st st-new">New</span> | Found during validation; wasn't in the first list |
-| <span class="st st-pdf">Withdrawn</span> | Turned out to be a text-extraction glitch; listed on the [validation page](/docs/validation.html) only |
+This section lists every problem found in the preliminary version (arXiv 2606.30790v1), ordered by how much it matters. Every item was re-checked against the paper's PDF, including tables and figures, and every number was recomputed. [How this was checked](/docs/validation.html) shows how. Items marked <span class="st st-ok">Confirmed</span> hold as stated against the PDF.
 
 ## Summary
 

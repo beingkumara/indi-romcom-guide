@@ -37,6 +37,6 @@ Table 6's caption says "**Bold** = best BL per family", but no values in Table 6
 
 ## W5. Figure 4 caption describes lines that aren't drawn
 
-<span class="st st-new">New</span>
+<span class="st st-ok">Confirmed</span>
 
 The caption says "Dashed vertical lines separate the seven task groups", but the figure has no dashed lines.

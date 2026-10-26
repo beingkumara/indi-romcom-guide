@@ -35,5 +35,5 @@ Links are relative and use `.html` file names, so the site works under a sub-pat
 ## Editing
 
 - Add a page by creating `content/docs/<name>.md` with `title` and `weight` front matter.
-- Status chips on issue pages are plain HTML: `<span class="st st-ok">Confirmed</span>` (also `st-new`, `st-fix`, `st-pdf`).
+- Status chips on issue pages are plain HTML: `<span class="st st-ok">Confirmed</span>`.
 - Link to pages with root paths and `.html`, e.g. `[C5](/docs/issues/critical.html#c5-nli-labels-are-mapped-two-different-ways)`.

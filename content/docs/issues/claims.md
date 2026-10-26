@@ -60,14 +60,14 @@ The abstract says reasoning tasks degrade less than detection tasks "because the
 
 ## M7. Data sourcing contradicts itself
 
-<span class="st st-ok">Confirmed</span> <span class="st st-new">New detail</span>
+<span class="st st-ok">Confirmed</span>
 
 - Section 3.1 says all tasks come from "well-validated public sources", but 52 of the 100 Word Analogy items were **written by the authors** (B.6).
 - The paper says sampling was stratified, but B.6 says Toxicity was a **random** draw.
 - Toxicity's source pool is 10,000 in Table 8 and 90.3K in B.6.
 - Toxic items come from IndicAlign-Toxic and benign items from IndicAlign-Instruct, so a model may tell them apart by style alone.
 - GSM8K is listed as 8,000 items. The official train split is 7,473 and train plus test is 8,792, so 8,000 matches neither.
-- **New:** the Tamil paraphrase translations were made by the authors, and no validation of them is described.
+- The Tamil paraphrase translations were made by the authors, and no validation of them is described.
 
 ## M8. The language explanations don't hold up
 
@@ -85,11 +85,9 @@ Claude Sonnet 4.6 wrote the translations and the code-mixing, and Claude Opus 4.
 
 ## M10. The romanization scheme isn't stated
 
-<span class="st st-fix">Corrected</span>
+<span class="st st-ok">Confirmed</span>
 
 The paper mixes three romanization sources (IndicXlit, Aksharamukha, IndicLLMSuite) and calls the resulting differences "natural variability". Variation between tools isn't the same as how people actually type. The paper never says which Aksharamukha target scheme was used, and scholarly schemes (IAST, ISO) use diacritics nobody types on a phone.
-
-*Correction:* my first list said Aksharamukha produces diacritics "by default". The more accurate point is that the scheme is unstated.
 
 ## M11. The conclusion overclaims
 
@@ -102,7 +100,7 @@ The conclusion says the results are "proving that targeted code-mixed supervisio
 
 ## M12. "Math scores highest" is contradicted by Figure 4
 
-<span class="st st-new">New</span>
+<span class="st st-ok">Confirmed</span>
 
 Section 5.1 says GSM8K "yields the highest accuracy overall (up to ~80% for LLaMA-3.1-70B)", and explains this with CAT-0 protection of numbers. In Figure 4, **sentiment is higher for almost every model**: about 77–95%, with LLaMA-3.1-8B near 95%. GSM8K tops out around 80%.
 

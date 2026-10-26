@@ -54,7 +54,7 @@ layout: hextra-home
   >}}
   {{< hextra/feature-card
     title="How this was checked"
-    subtitle="The validation log: what was recomputed, what changed from the first read, and what still needs the PDF."
+    subtitle="How every issue was checked against the paper, and what was not checked."
     link="/docs/validation.html"
   >}}
 {{< /hextra/feature-grid >}}

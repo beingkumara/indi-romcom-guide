@@ -28,7 +28,7 @@ Section B.7 then analyses the data with the Table 9 labels: "all 6,925 substitut
 
 ## C2. The generation prompt is written for NLI only
 
-<span class="st st-new">New</span>
+<span class="st st-ok">Confirmed</span>
 
 The B.3 prompt is presented as the prompt for all tasks and languages, but its annotation format asks for `CMI_premise={score} CMI_hypothesis={score}`. Only the NLI task has a premise and a hypothesis. Either different prompts were used for other tasks (not shown), or math and analogy items were generated with a prompt that doesn't fit them.
 
@@ -46,13 +46,11 @@ The "75%" data is about 36% mixed on the paper's own measure. The level names do
 
 ## C4. Per-task mixing values don't make sense
 
-<span class="st st-fix">Corrected</span>
+<span class="st st-ok">Confirmed</span>
 
 - At 25%, **NLI has CMI 0.004** and **Sentiment 0.028**. That is essentially unmixed English.
 - **Toxicity** has CMI 0.851 → 0.805 → 0.981. It is the highest of any task, and it *falls* from 25% to 50%, against the "rises monotonically" claim.
 - Appendix B.5 says the toxic input is **never code-mixed**. So the high CMI must come from the label and explanation, which means the toxicity task doesn't test understanding of mixed *input* at all.
-
-*Correction:* my first list also said the Table 5 toxicity example contradicts B.5. That point is withdrawn. The example is romanized Hindi, which may be how the source sentence reads after romanization.
 
 ## C5. NLI labels are mapped two different ways
 
@@ -69,12 +67,12 @@ Table 5's own example: *"These were the three U2 pilots who were in General May'
 
 ## C6. The "reply in English" metric is defined two ways
 
-<span class="st st-ok">Confirmed</span> <span class="st st-new">New detail</span>
+<span class="st st-ok">Confirmed</span>
 
 - **Appendix C.3:** language is detected *per token* with IndicLID, and a reply counts as English if more than 70% of its tokens are English. IndicLID is a sentence-level language identifier, not a token tagger.
 - **Table 14:** a reply counts as English if more than 70% of its tokens are **ASCII**. Every romanized reply is ASCII, which is why the fine-tuned models score 99.9%. The paper admits this.
-- **New:** even with the C.3 definition, a 25%-mixed input is about 75% English (mean CMI 0.249). A *perfect* reply in that style would be over 70% English and would count as a failure.
-- **New:** C.3 says RDR is computed separately for labels and explanations. Only one RDR is ever reported.
+- Even with the C.3 definition, a 25%-mixed input is about 75% English (mean CMI 0.249). A *perfect* reply in that style would be over 70% English and would count as a failure.
+- C.3 says RDR is computed separately for labels and explanations. Only one RDR is ever reported.
 - An Indian-language model that replies in **native script** would get a low (good) RDR, even though that also breaks the "same script" instruction.
 
 **Why it matters:** Table 7 and the claim that "Indic pretraining drives register adherence" can't be read reliably.
@@ -93,7 +91,7 @@ Three different models can't match to one decimal across 8,400 items. This looks
 
 ## C8. The few-shot table looks derived, not run
 
-<span class="st st-fix">Corrected numbers</span>
+<span class="st st-ok">Confirmed</span>
 
 Recomputing Table 13 minus Table 6 cell by cell:
 
@@ -102,11 +100,11 @@ Recomputing Table 13 minus Table 6 cell by cell:
 - The caption says "approximately 7–8% higher", but most cells are 6–7.
 - The section heading says few-shot prompting "helps close the performance gap", while the text below it says the gaps "remain largely unchanged".
 
-*Correction:* my first list said "about 6.3–6.8 points"; the real range is 5.5–7.3. Ask whether Table 13 was actually run.
+Ask whether Table 13 was actually run.
 
 ## C9. Fine-tuning setup is inconsistent and may leak test data
 
-<span class="st st-ok">Confirmed</span> <span class="st st-new">New detail</span>
+<span class="st st-ok">Confirmed</span>
 
 | | Appendix C.1 | Section 5.2 and Table 14 |
 |---|---|---|
@@ -124,13 +122,13 @@ Recomputing Table 13 minus Table 6 cell by cell:
 
 ## C10. Human validation is very thin
 
-<span class="st st-ok">Confirmed</span> <span class="st st-new">New detail</span>
+<span class="st st-ok">Confirmed</span>
 
 - The paper says there were **four annotators** (one per language) and also **two per language**. Two per language would need eight.
 - The number of items rated is never given.
 - **The actual naturalness ratings are never reported.** Only agreement (κ) is shown.
 - Every κ in Table 11 is exactly **0.00 or 1.00**, which only happens with one or very few items per cell.
-- **New:** the per-language κ in Table 3 (0.52, 0.48, 0.56, 0.91) is just the mean of those 0s and 1s across tasks. For example, Gujarati: (1+1+0.33+1+1+1+1)/7 = 0.905.
+- The per-language κ in Table 3 (0.52, 0.48, 0.56, 0.91) is just the mean of those 0s and 1s across tasks. For example, Gujarati: (1+1+0.33+1+1+1+1)/7 = 0.905.
 - κ = 0 means agreement no better than chance. That is what Word Analogy and GSM8K get in three of four languages, yet the data is called "validated".
 
 ## C11. ChrF is used the wrong way
